@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff9e8;
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: #151412;
+  }
+
+  p, ol {
+    line-height: 1.5;
+    text-indent: 16px;
+  }
+  p {
+    text-align: justify;
+  }
+  
+  main, .main, header, .header {
+    margin: 24px;
+  }
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #f36b6b;
+    font-family:'Times New Roman', Times, serif;
+}

@@ -6,6 +6,7 @@
     <meta name="description" content="Эта страница создана в стиле HTML4. При её создании не использовались семантические теги.">
     <meta name="author" content="Дмитрий Кутузов, z1431">
     <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <div>
@@ -51,17 +52,13 @@
                 что позволяет уменьшить объем передаваемых данных и повысить производительность. 
                 Передача данных осуществляется через <abbr title="Application Programming Interface">API</abbr> или стандартизированные протоколы.
             </p>
-            <div class="image">
-                <img src="../assets/pic1.jpg" alt="Растровые карты" >
+            <div class="article-image">
+                <img src="../assets/pic1.jpg"  alt="Растровые карты" >
                 <div class="caption">Растровые карты</div>
             </div>
-            <div class="image">
-                <img src="../assets/pic3.png" width="300" alt="Векторные карты" >
+            <div class="article-image">
+                <img src="../assets/pic3.png"  alt="Векторные карты" >
                 <div class="caption">Векторные карты</div>
-            </div>
-            <div class="image">
-                <img src="../assets/pic2.jpg" alt="Пирамида тайлов" >
-                <div class="caption">Пирамида тайлов</div>
             </div>
             <p>
                 Разработка веб-карт базируется на современных технологиях, включая JavaScript-библиотеки, 
@@ -106,161 +103,169 @@
                   </ol>
                 </li>
               </ol>
-              <h3>Таблица масштабов <q>Пирамиды тайлов</q></h3>
-              <table border="1">
-                <thead>
-                    <tr>
-                        <th>Zoom Level (Z)</th>
-                        <th>Размер области (км × км)</th>
-                        <th>Количество тайлов (на стороне)</th>
-                        <th>Масштаб (приблизительно)</th>
-                        <th>Размер пикселя (м/пиксель)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0</td>
-                        <td>40,075 × 40,075</td>
-                        <td>1 × 1</td>
-                        <td>1:500,000,000</td>
-                        <td>~156,412</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>20,037 × 20,037</td>
-                        <td>2 × 2</td>
-                        <td>1:250,000,000</td>
-                        <td>~78,206</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>10,019 × 10,019</td>
-                        <td>4 × 4</td>
-                        <td>1:150,000,000</td>
-                        <td>~39,103</td>
-                    </tr>
-                    <tr>
-                        <td>n</td>
-                        <td > --- </td>
-                        <td >2n × 2n</td>
-                        <td colspan="2"> --- </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>5,009 × 5,009</td>
-                        <td>8 × 8</td>
-                        <td>1:70,000,000</td>
-                        <td>~19,551</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>2,505 × 2,505</td>
-                        <td>16 × 16</td>
-                        <td>1:35,000,000</td>
-                        <td>~9,776</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>1,252 × 1,252</td>
-                        <td>32 × 32</td>
-                        <td>1:15,000,000</td>
-                        <td>~4,888</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>626 × 626</td>
-                        <td>64 × 64</td>
-                        <td>1:8,000,000</td>
-                        <td>~2,444</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>313 × 313</td>
-                        <td>128 × 128</td>
-                        <td>1:4,000,000</td>
-                        <td>~1,222</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>156 × 156</td>
-                        <td>256 × 256</td>
-                        <td>1:2,000,000</td>
-                        <td>~610</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>78 × 78</td>
-                        <td>512 × 512</td>
-                        <td>1:1,000,000</td>
-                        <td>~305</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>39 × 39</td>
-                        <td>1,024 × 1,024</td>
-                        <td>1:500,000</td>
-                        <td>~152</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>19 × 19</td>
-                        <td>2,048 × 2,048</td>
-                        <td>1:250,000</td>
-                        <td>~76</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>9.8 × 9.8</td>
-                        <td>4,096 × 4,096</td>
-                        <td>1:150,000</td>
-                        <td>~38</td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>4.9 × 4.9</td>
-                        <td>8,192 × 8,192</td>
-                        <td>1:70,000</td>
-                        <td>~19</td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>2.4 × 2.4</td>
-                        <td>16,384 × 16,384</td>
-                        <td>1:35,000</td>
-                        <td>~9</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>1.2 × 1.2</td>
-                        <td>32,768 × 32,768</td>
-                        <td>1:15,000</td>
-                        <td>~4.8</td>
-                    </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>0.6 × 0.6</td>
-                        <td>65,536 × 65,536</td>
-                        <td>1:8,000</td>
-                        <td>~2.4</td>
-                    </tr>
-                    <tr>
-                        <td>17</td>
-                        <td>0.3 × 0.3</td>
-                        <td>131,072 × 131,072</td>
-                        <td>1:4,000</td>
-                        <td>~1.2</td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>0.15 × 0.15</td>
-                        <td>262,144 × 262,144</td>
-                        <td>1:2,000</td>
-                        <td>~0.6</td>
-                    </tr>
-                    
-                </tbody>
-            </table>           
         </div>
+
+            <div class="pyramid">
+              <h3 style="width: fit-content">Таблица масштабов <q>Пирамиды тайлов</q></h3>
+                <table border="1"
+                style="width: 1000px; background: repeating-linear-gradient(45deg, #b2ddf0, #f0f0f0 10px, #fff 10px, #fff 20px);"
+                >
+                    <thead>
+                        <tr>
+                            <th>Zoom Level (Z)</th>
+                            <th>Размер области (км × км)</th>
+                            <th>Количество тайлов (на стороне)</th>
+                            <th>Масштаб (приблизительно)</th>
+                            <th>Размер пикселя (м/пиксель)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>40,075 × 40,075</td>
+                            <td>1 × 1</td>
+                            <td>1:500,000,000</td>
+                            <td>~156,412</td>
+                
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>20,037 × 20,037</td>
+                            <td>2 × 2</td>
+                            <td>1:250,000,000</td>
+                            <td>~78,206</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>10,019 × 10,019</td>
+                            <td>4 × 4</td>
+                            <td>1:150,000,000</td>
+                            <td>~39,103</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td> --- </td>
+                            <td>2n × 2n</td>
+                            <td colspan="2"> <figure class="clearfix">
+                                <img style="width: 100%" src="../assets/pic2.jpg" alt="Пирамида тайлов">
+                                <figcaption>Пирамида тайлов</figcaption>
+                            </figure> </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>5,009 × 5,009</td>
+                            <td>8 × 8</td>
+                            <td>1:70,000,000</td>
+                            <td>~19,551</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2,505 × 2,505</td>
+                            <td>16 × 16</td>
+                            <td>1:35,000,000</td>
+                            <td>~9,776</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>1,252 × 1,252</td>
+                            <td>32 × 32</td>
+                            <td>1:15,000,000</td>
+                            <td>~4,888</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>626 × 626</td>
+                            <td>64 × 64</td>
+                            <td>1:8,000,000</td>
+                            <td>~2,444</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>313 × 313</td>
+                            <td>128 × 128</td>
+                            <td>1:4,000,000</td>
+                            <td>~1,222</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>156 × 156</td>
+                            <td>256 × 256</td>
+                            <td>1:2,000,000</td>
+                            <td>~610</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>78 × 78</td>
+                            <td>512 × 512</td>
+                            <td>1:1,000,000</td>
+                            <td>~305</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>39 × 39</td>
+                            <td>1,024 × 1,024</td>
+                            <td>1:500,000</td>
+                            <td>~152</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>19 × 19</td>
+                            <td>2,048 × 2,048</td>
+                            <td>1:250,000</td>
+                            <td>~76</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>9.8 × 9.8</td>
+                            <td>4,096 × 4,096</td>
+                            <td>1:150,000</td>
+                            <td>~38</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>4.9 × 4.9</td>
+                            <td>8,192 × 8,192</td>
+                            <td>1:70,000</td>
+                            <td>~19</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>2.4 × 2.4</td>
+                            <td>16,384 × 16,384</td>
+                            <td>1:35,000</td>
+                            <td>~9</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>1.2 × 1.2</td>
+                            <td>32,768 × 32,768</td>
+                            <td>1:15,000</td>
+                            <td>~4.8</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>0.6 × 0.6</td>
+                            <td>65,536 × 65,536</td>
+                            <td>1:8,000</td>
+                            <td>~2.4</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>0.3 × 0.3</td>
+                            <td>131,072 × 131,072</td>
+                            <td>1:4,000</td>
+                            <td>~1.2</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>0.15 × 0.15</td>
+                            <td>262,144 × 262,144</td>
+                            <td>1:2,000</td>
+                            <td>~0.6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         <div class = "footer">
             <hr>
             <div class="attribution">
@@ -270,4 +275,71 @@
         </div>
     </div>
 </body>
+<style>
+    .pyramid {
+        margin-top: 60px;
+        width: 100vw;
+        
+        overflow-x: scroll; 
+    }
+    .pyramid > * {
+        margin: auto;
+    }
+    .nav {
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .brand {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .article-image {
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+
+    @media(min-width: 600px) {
+        .article {
+            column-count: 2;
+            column-gap: 24px;
+            margin-top: 24px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+        }
+    }
+
+    @media (min-width: 955px) {
+        .article {
+            column-count: 3;
+            column-gap: 42px;
+            margin-top: 36px;
+        }
+
+
+    }
+
+    .image,
+    #stack {
+        break-inside: avoid
+    }
+</style>
 </html>
