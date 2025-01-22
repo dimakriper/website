@@ -5,7 +5,7 @@
     <title>Электронные карты</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Эта страница создана с применением семантических тегов из HTML5.">
+    <meta name="description" content="На этой странице представлены источники, использованные при создании сайта.">
     <meta name="author" content="Дмитрий Кутузов, z1431">
     <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles/styles.css">
@@ -88,54 +88,72 @@
             </p>
 
             <section id="stack">
-                
+
                 <h3>Стек работы с электронными картами</h3>
                 <details open>
                     <summary>GIS-системы</summary>
                     <ol>
-                        <li><dfn>QGIS</dfn> (Quantum GIS) – открытая система для создания и анализа пространственных данных.</li>
-                        <li><dfn>ArcGIS Server</dfn> – мощная коммерческая система для управления геоданными и картами.</li>
+                        <li><dfn>QGIS</dfn> (Quantum GIS) – открытая система для создания и анализа пространственных
+                            данных.</li>
+                        <li><dfn>ArcGIS Server</dfn> – мощная коммерческая система для управления геоданными и картами.
+                        </li>
                     </ol>
+                    <input type="text" placeholder="Enter list item">
+                    <button onclick="addListItem(this)">Add Item</button>
                 </details>
                 <details open>
                     <summary>Базы данных с пространственной поддержкой</summary>
                     <ol>
                         <li><dfn>PostGIS</dfn> – расширение для PostgreSQL для работы с географическими данными.</li>
-                        <li><dfn>SpatiaLite</dfn> – расширение для SQLite, предоставляющее возможности для работы с пространственными данными.</li>
+                        <li><dfn>SpatiaLite</dfn> – расширение для SQLite, предоставляющее возможности для работы с
+                            пространственными данными.</li>
                     </ol>
-                </details open>
+                    <input type="text" placeholder="Enter list item">
+                    <button onclick="addListItem(this)">Add Item</button>
+                </details>
                 <details>
                     <summary>Тайловые серверы</summary>
                     <ol>
                         <li><dfn>Mapnik</dfn> – библиотека для рендеринга карт в различных форматах.</li>
                         <li><dfn>TileStache</dfn> – сервер для обслуживания картографических тайлов.</li>
                     </ol>
+                    <input type="text" placeholder="Enter list item">
+                    <button onclick="addListItem(this)">Add Item</button>
                 </details>
                 <details>
                     <summary>Стандарты</summary>
                     <ol>
-                        <li><dfn><abbr title="Web Map Service">WMS</abbr></dfn> – стандарт для предоставления растровых карт через интернет.</li>
-                        <li><dfn><abbr title="Web Feature Service">WFS</abbr></dfn> – стандарт для предоставления векторных данных и возможности их редактирования.</li>
-                        <li><dfn><abbr title="Web Map Tile Service">WMTS</abbr></dfn> – стандарт для передачи карт, разделённых на тайлы.</li>
+                        <li><dfn><abbr title="Web Map Service">WMS</abbr></dfn> – стандарт для предоставления растровых
+                            карт через интернет.</li>
+                        <li><dfn><abbr title="Web Feature Service">WFS</abbr></dfn> – стандарт для предоставления
+                            векторных данных и возможности их редактирования.</li>
+                        <li><dfn><abbr title="Web Map Tile Service">WMTS</abbr></dfn> – стандарт для передачи карт,
+                            разделённых на тайлы.</li>
                     </ol>
+                    <input type="text" placeholder="Enter list item">
+                    <button onclick="addListItem(this)">Add Item</button>
                 </details>
                 <details>
                     <summary>Фронтенд библиотеки для работы с веб-картами</summary>
                     <ol>
                         <li><dfn>Leaflet</dfn> – легковесная JavaScript-библиотека для отображения карт.</li>
-                        <li><dfn>OpenLayers</dfn> – более мощная библиотека для работы с картами и географическими данными.</li>
-                        <li><dfn>Mapbox GL JS</dfn> – библиотека для отображения векторных карт с использованием WebGL для создания более динамичных и интерактивных карт.</li>
-                        <li><dfn>CesiumJS</dfn> – библиотека для работы с 3D-картами и визуализацией пространственных данных в реальном времени.</li>
+                        <li><dfn>OpenLayers</dfn> – более мощная библиотека для работы с картами и географическими
+                            данными.</li>
+                        <li><dfn>Mapbox GL JS</dfn> – библиотека для отображения векторных карт с использованием WebGL
+                            для создания более динамичных и интерактивных карт.</li>
+                        <li><dfn>CesiumJS</dfn> – библиотека для работы с 3D-картами и визуализацией пространственных
+                            данных в реальном времени.</li>
                     </ol>
+                    <input type="text" placeholder="Enter list item">
+                    <button onclick="addListItem(this)">Add Item</button>
                 </details>
             </section>
         </article>
 
         <section class="pyramid">
             <h3 style="width: fit-content">Таблица масштабов <q>Пирамиды тайлов</q></h3>
-            <table border="1"
-            style="width: 1000px; background: repeating-linear-gradient(45deg, #b2ddf0, #f0f0f0 10px, #fff 10px, #fff 20px);"
-            >
+            <table border="1" id="pyramidTable"
+                style="width: 1000px; background: repeating-linear-gradient(45deg, #b2ddf0, #f0f0f0 10px, #fff 10px, #fff 20px);">
                 <thead>
                     <tr>
                         <th>Zoom Level (Z)</th>
@@ -143,6 +161,7 @@
                         <th>Количество тайлов (на стороне)</th>
                         <th>Масштаб (приблизительно)</th>
                         <th>Размер пикселя (м/пиксель)</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -152,7 +171,7 @@
                         <td>1 × 1</td>
                         <td>1:500,000,000</td>
                         <td>~156,412</td>
-                        
+
                     </tr>
                     <tr>
                         <td>1</td>
@@ -172,10 +191,12 @@
                         <td>n</td>
                         <td> --- </td>
                         <td>2n × 2n</td>
-                        <td colspan="2"> <figure class="clearfix">
-                            <img style="width: 100%" src="../assets/pic2.jpg" alt="Пирамида тайлов">
-                            <figcaption>Пирамида тайлов</figcaption>
-                        </figure> </td>
+                        <td colspan="2">
+                            <figure class="clearfix">
+                                <img style="width: 100%" src="../assets/pic2.jpg" alt="Пирамида тайлов">
+                                <figcaption>Пирамида тайлов</figcaption>
+                            </figure>
+                        </td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -288,12 +309,39 @@
                         <td>262,144 × 262,144</td>
                         <td>1:2,000</td>
                         <td>~0.6</td>
-                    </tr>               
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="zoomLevel" value="0"></td>
+                        <td><input type="text" id="areaSize" value="40,075 × 40,075"></td>
+                        <td><input type="text" id="tileCount" value="1 × 1"></td>
+                        <td><input type="text" id="scale" value="1:500,000,000"></td>
+                        <td><input type="text" id="pixelSize" value="~156,412"></td>
+                        <td style="text-align: center;">
+                            <button onclick="addRow()">Add Row</button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
-            
         </section>
-    </main>
+        <div id="clock" style="font-size: 20px; margin-top: 20px;"></div>
+        <script>
+            const colck = document.getElementById('clock');
+            clock.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'yellow';
+                this.style.fontSize = '25px';
+            });
+    
+            clock.addEventListener('mouseout', function() {
+                this.style.backgroundColor = '';
+                this.style.fontSize = '20px';
+            });
+            clock.addEventListener('click', function() {
+                alert('Автор: Дмитрий Кутузов, z1431');
+            });
+
+            </script>
+        </main>
+        
     <footer>
         <hr>
         <div class="attribution">
@@ -302,16 +350,78 @@
         </div>
     </footer>
 </body>
+<script>
+    window.addEventListener("load", function () {
+        console.log("Page fully loaded");
+        // Update the clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
+
+    const updateClock = () => {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const timeString = `сейчас ${hours} часов ${minutes} минут`;
+        document.getElementById('clock').textContent = timeString;
+    }
+
+    function addRow() {
+        const table = document.getElementById('pyramidTable').getElementsByTagName('tbody')[0];
+        const lastRow = table.lastElementChild;
+        const newRow = table.insertRow();
+
+        const zoomLevel = document.getElementById('zoomLevel').value;
+        const areaSize = document.getElementById('areaSize').value;
+        const tileCount = document.getElementById('tileCount').value;
+        const scale = document.getElementById('scale').value;
+        const pixelSize = document.getElementById('pixelSize').value;
+
+        table.insertBefore(newRow, lastRow);
+        newRow.innerHTML = `
+            <td contenteditable="true">${zoomLevel}</td>
+            <td contenteditable="true">${areaSize}</td>
+            <td contenteditable="true">${tileCount}</td>
+            <td contenteditable="true">${scale}</td>
+            <td contenteditable="true">${pixelSize}</td>
+            <td>
+                <button onclick="deleteRow(this)">Delete</button>
+            </td>
+        `;
+    }
+
+    function deleteRow(button) {
+        const row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+
+    function addListItem(button) {
+        const input = button.previousElementSibling;
+        const list = button.previousElementSibling.previousElementSibling;
+        const newItem = document.createElement('li');
+        newItem.textContent = input.value;
+        newItem.innerHTML += ' <button onclick="removeListItem(this)">Remove</button>';
+        list.appendChild(newItem);
+        input.value = '';
+    }
+
+    function removeListItem(button) {
+        const item = button.parentNode;
+        item.parentNode.removeChild(item);
+    }
+</script>
 <style>
     .pyramid {
         margin-top: 60px;
         width: 100vw;
-        
-        overflow-x: scroll; 
+
+        overflow-x: scroll;
     }
-    .pyramid > * {
+
+    .pyramid>* {
         margin: auto;
     }
+
     nav {
         position: sticky;
         top: 0;
